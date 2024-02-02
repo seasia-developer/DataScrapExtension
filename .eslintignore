@@ -1,0 +1,7 @@
+/**/node_modules/*
+node_modules
+
+webpack.*.js
+server.js
+content-script.js
+background.js

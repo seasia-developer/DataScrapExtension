@@ -1,0 +1,12 @@
+#huggingface-container{
+    position: fixed;
+    box-sizing: border-box;
+    direction: ltr;
+    z-index: 100000000000;
+    border: none;
+    top: 10px;
+    right: 10px;
+    overflow: auto;
+    box-shadow: 0px 2px 12px rgba(0,0,0,.3);
+    border-radius: 5px;
+}

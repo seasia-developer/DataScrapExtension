@@ -1,0 +1,66 @@
+{
+  "author": "React App",
+  "description": "Create React App Sample",
+  "manifest_version": 3,
+  "name": "test-user",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAl9SAS9Ey5f/fztNe+XxIXzcDEJjdx7+6yb3VrjuX04fyG8gzvGMlQk2OkVn3vvXb/OA44OSLHKVNZCF5xnAMAdjivlXorbY+CBTjKUrGGC+d0T82GnpNT/VxnyufXamrqd7Hkth/SfWLhXuk2sV0749rnAn5fr0WCac55fO6kWKhn0KEiKlSynle5fPeV1X3em3MfH/sXUaZ1tSj6coyfH9Sj2FFstdarjFfxkWzU4IYCQjqxu0t7as8Du5Z5O7UKenp/+NViCht0k3QCYTAs0K0Qup2GxI78CUYp/jXVfTcgtJapJvUwfvuH7QeJo8GoopyDFoV8sbPE/awzTURlQIDAQAB",
+  "oauth2": {
+    "client_id": "909289988026-1f1vr5o2m0ko4n9o5mi1he1h9dqrrfcm.apps.googleusercontent.com",
+    "scopes": ["scope1", "scope2"]
+  },  
+  "permissions": [
+    "identity",    
+    "activeTab",
+    "tabs",
+    "scripting",
+    "unlimitedStorage",
+    "webRequest",
+    "bookmarks",
+    "storage"
+  ],
+  "version": "0.1",
+  "icons": {
+    "16": "/logo192.png",
+    "32": "/logo192.png",
+    "64": "/logo192.png"
+  },
+  "action": {
+    "browser_style": true,
+    "default_icon": {
+      "16": "/logo192.png",
+      "32": "/logo192.png",
+      "64": "/logo192.png"
+    },
+    "default_popup": ""
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content-script.js"],
+      "css": ["content.css"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["index.html"],
+      "matches": ["http://*/*", "https://*/*"]
+    },
+    {
+      "resources": ["index.js"],
+      "matches": ["http://*/*", "https://*/*"]
+    },
+    {
+      "resources": ["static/css/main.53b302c6.css"],
+      "matches": ["http://*/*", "https://*/*"]
+    },
+    {
+      "resources": ["static/js/main.0c3d8b13.js"],
+      "matches": ["http://*/*", "https://*/*"]
+    }
+  ],
+  "host_permissions": ["https://*/*"]
+}
